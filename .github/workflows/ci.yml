@@ -22,6 +22,7 @@ on:
   push:
     branches: [main]
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
   workflow_dispatch:
 
 concurrency:
@@ -54,7 +55,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: storytold/craft-fonts
-          ref: 8dcdacd5153e64560d109541a47d806f26f048c0 # bump deliberately
+          ref: 3d9ab3a132ed0eff457e424226a435a901da30d3 # bump deliberately
           path: craft-fonts
           persist-credentials: false
       - name: Install system libraries and Mesa's Vulkan drivers (lavapipe)
@@ -110,7 +111,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: storytold/craft-fonts
-          ref: 8dcdacd5153e64560d109541a47d806f26f048c0 # bump deliberately
+          ref: 3d9ab3a132ed0eff457e424226a435a901da30d3 # bump deliberately
           path: craft-fonts
           persist-credentials: false
       - uses: dtolnay/rust-toolchain@686976e191b89faba57d3206551f0f330d8cb249 # stable
